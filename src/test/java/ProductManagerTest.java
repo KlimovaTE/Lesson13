@@ -43,4 +43,24 @@ public class ProductManagerTest {
         Assertions.assertArrayEquals(expected, actual);
     }
 
+    @Test
+    public void testSearchByAuthor() {
+
+
+        Product[] expected = {item2, item5};
+        Product[] actual = manager.searchBy("Автор2");
+
+        Assertions.assertArrayEquals(expected, actual);
+    }
+
+    @Test
+    public void testSearchByManufacturer() {
+
+
+        Product[] expected = {item3, item4, item6};
+        Product[] actual = manager.searchBy("Прои");
+
+        Assertions.assertArrayEquals(expected, actual);
+    }
+
 }
